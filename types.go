@@ -14,8 +14,14 @@ type Rect struct {
 }
 
 const (
-	PXIN = float64(96)                //pixels per inch
-	PPIN = float64(72)                //points per inch
-	PPMM = float64(PPIN * 1.0 / 25.4) //points per millimetre
-	PPPX = float64(PPIN / PXIN)       // points per pixel
+	AnchorsLayer    = "anchors"
+	AnchorReference = "ref-anchor"
+	ChromeLayer     = "chrome"
+	TextFieldsLayer = "textfields"
+	Translate       = "translate"
+	PXIN            = float64(96)                //pixels per inch
+	PPIN            = float64(72)                //points per inch
+	PPMM            = float64(PPIN * 1.0 / 25.4) //points per millimetre
+	PPPX            = float64(PPIN / PXIN)       // points per pixel
+
 )
