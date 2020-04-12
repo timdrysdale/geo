@@ -1,16 +1,24 @@
 package geo
 
 type Point struct {
-	X, Y float64
+	X float64 `json:"x"`
+	Y float64 `json:"y"`
 }
 
 type Dim struct {
-	W, H float64
+	W float64 `json:"w"`
+	H float64 `json:"h"`
 }
 
 type Rect struct {
-	Corner Point
-	Dim    Dim
+	Corner Point `json:"corner"`
+	Dim    Dim   `json:"dim"`
+}
+
+type DynamicDim struct {
+	Dim             Dim  `json:"dim"`
+	WidthIsDynamic  bool `json:"widthIsDynamic"`
+	HeightIsDynamic bool `json:"heightIsDynamic"`
 }
 
 const (
@@ -18,6 +26,8 @@ const (
 	AnchorReference = "ref-anchor"
 	ChromeLayer     = "chrome"
 	TextFieldsLayer = "textfields"
+	PagesLayer      = "pages"
+	ImagesLayer     = "images"
 	Translate       = "translate"
 	PXIN            = float64(96)                //pixels per inch
 	PPIN            = float64(72)                //points per inch
