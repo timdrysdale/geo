@@ -29,6 +29,8 @@ const (
 	PagesLayer      = "pages"
 	ImagesLayer     = "images"
 	Translate       = "translate"
+	SVGElement      = "svg-"
+	JPGElement      = "jpg-"
 	PXIN            = float64(96)                //pixels per inch
 	PPIN            = float64(72)                //points per inch
 	PPMM            = float64(PPIN * 1.0 / 25.4) //points per millimetre
