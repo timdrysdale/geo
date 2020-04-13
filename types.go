@@ -6,19 +6,14 @@ type Point struct {
 }
 
 type Dim struct {
-	W float64 `json:"w"`
-	H float64 `json:"h"`
+	Width        float64 `json:"width"`
+	Height       float64 `json:"height"`
+	DynamicWidth bool    `json:"dynamicWidth"` //dynamicW
 }
 
 type Rect struct {
 	Corner Point `json:"corner"`
 	Dim    Dim   `json:"dim"`
-}
-
-type DynamicDim struct {
-	Dim             Dim  `json:"dim"`
-	WidthIsDynamic  bool `json:"widthIsDynamic"`
-	HeightIsDynamic bool `json:"heightIsDynamic"`
 }
 
 const (
